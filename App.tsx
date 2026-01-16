@@ -283,6 +283,26 @@ const App: React.FC = () => {
         </nav>
       </header>
 
+      {/* Poetic Intro Section */}
+      <section className="relative z-10 pt-12 pb-6 md:pt-20 md:pb-12 px-6 flex flex-col items-center text-center animate-in fade-in slide-in-from-top-10 duration-1000">
+        <div className="max-w-4xl space-y-6 md:space-y-8">
+          <div className="inline-flex flex-col items-center">
+             <span className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.5em] text-emerald-400/60 mb-4 animate-pulse">Eternal Wisdom</span>
+             <h2 className="text-4xl md:text-7xl font-bold serif-text text-white leading-tight drop-shadow-2xl">
+                Echoes of the Infinite
+             </h2>
+          </div>
+          <p className="text-emerald-100/70 text-base md:text-2xl font-light italic serif-text leading-relaxed px-4 md:px-0">
+            "Rise beyond the stars, for thy spirit is the Royal Eagle of the Heavens."
+          </p>
+          <div className="flex items-center justify-center gap-3">
+             <div className="h-[1px] w-8 md:w-16 bg-gradient-to-r from-transparent to-emerald-400/30"></div>
+             <div className="w-2 h-2 rounded-full bg-emerald-400/40"></div>
+             <div className="h-[1px] w-8 md:w-16 bg-gradient-to-l from-transparent to-emerald-400/30"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Area */}
       <main className="flex-1 px-4 md:px-6 pb-40 md:pb-48 relative z-20">
         <div className="max-w-7xl mx-auto py-6 md:py-10">
