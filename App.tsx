@@ -289,7 +289,7 @@ const App: React.FC = () => {
           <div className="inline-flex flex-col items-center">
              <span className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.5em] text-emerald-400/60 mb-4 animate-pulse">Eternal Wisdom</span>
              <h2 className="text-4xl md:text-7xl font-bold serif-text text-white leading-tight drop-shadow-2xl">
-                Echoes of the Infinite
+                ALLAMA IQBAL
              </h2>
           </div>
           <p className="text-emerald-100/70 text-base md:text-2xl font-light italic serif-text leading-relaxed px-4 md:px-0">
