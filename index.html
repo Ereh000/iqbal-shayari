@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Iqbal's Vision</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +21,19 @@
             background-color: var(--emerald-primary);
             color: #ffffff;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* Support for mobile web-app native feel */
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: none;
         }
 
         #root {
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .urdu-text {
@@ -35,6 +44,24 @@
 
         .serif-text {
             font-family: 'Playfair Display', serif;
+        }
+
+        /* Safe Areas */
+        .safe-top {
+            padding-top: env(safe-area-inset-top);
+        }
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        /* Responsive Visibility */
+        @media (max-width: 480px) {
+            .xs\:inline { display: inline; }
+            .xs\:hidden { display: none; }
+            .xs\:block { display: block; }
+        }
+        @media (min-width: 481px) {
+            .xs\:inline { display: none; }
         }
 
         /* Utility Animations */
@@ -51,9 +78,9 @@
             -webkit-backdrop-filter: blur(12px);
         }
 
-        /* Custom Scrollbar for better aesthetics */
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 4px;
         }
         ::-webkit-scrollbar-track {
             background: rgba(0, 0, 0, 0.05);
@@ -62,8 +89,20 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.2);
+        
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e5e7eb;
+            border-radius: 4px;
+        }
+
+        /* Improved Urdu Text for Small Screens */
+        @media (max-width: 640px) {
+            .urdu-text {
+                line-height: 2.2;
+            }
         }
     </style>
 <script type="importmap">
@@ -71,8 +110,8 @@
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
   }
 }
 </script>
