@@ -1,0 +1,7 @@
+{
+  "name": "Iqbal's Vision: Voice & Poetry",
+  "description": "An elegant application dedicated to the poetry and philosophy of Allama Iqbal. Experience his legendary verses with high-quality AI voice synthesis and deep philosophical explanations.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
